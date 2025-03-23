@@ -20,7 +20,9 @@ export function Layout(props: LayoutProps) {
 
           <Vite.Entrypoint entrypoints={['resources/css/app.css', 'resources/js/app.js']} />
         </head>
-        <body>{children}</body>
+        <body>
+          {children}
+        </body>
       </html>
     </>
   )

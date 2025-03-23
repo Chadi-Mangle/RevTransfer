@@ -1,6 +1,6 @@
-import { Layout } from "../components/layout.js"
-// import { csrfField, route } from "#start/vite"
-// import { HttpContext } from "@adonisjs/core/http"
+import { Layout } from "#components/layout"
+import { route } from "#utils/routeur"
+// import { csrfField } from "#utils/csrf"
 
 export function Home() {
   // const ctx = HttpContext.get()
@@ -9,6 +9,7 @@ export function Home() {
   return (
     <Layout>
       {/* Hero Section */}
+      <div up-main="modal"></div>
       <div class="bg-gradient-to-r from-indigo-600 to-purple-600">
         <div class="container mx-auto px-6 py-16 md:py-24 lg:py-32">
           <div class="flex flex-col md:flex-row items-center justify-between">
@@ -29,8 +30,10 @@ export function Home() {
                   Commencer gratuitement
                 </a>
                 <a 
-                  href="/login" 
+                  href={route('login')} 
                   class="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-lg font-semibold text-center transition-colors"
+                  up-layer="new"
+                  up-target="[up-main='modal']"
                 >
                   Se connecter
                 </a>

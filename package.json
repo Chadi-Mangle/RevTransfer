@@ -1,5 +1,5 @@
 {
-  "name": "RevTransfer",
+  "name": "ref-transfer",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -31,7 +31,9 @@
     "#tests/*": "./tests/*.js",
     "#start/*": "./start/*.js",
     "#config/*": "./config/*.js",
-    "#resources/*": "./resources/*.js"
+    "#resources/*": "./resources/*.js",
+    "#components/*": "./resources/views/components/*.js",
+    "#utils/*": "./utils/*.js"
   },
   "devDependencies": {
     "@adonisjs/assembler": "^7.8.2",
