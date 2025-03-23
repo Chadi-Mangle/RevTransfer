@@ -8,7 +8,7 @@
 */
 
 import router from '@adonisjs/core/services/router'
-import { Home } from '../resources/views/pages/home.tsx'
+import { Home } from '#resources/views/pages/home'
 
 router.get('/', () => {
   return <Home />

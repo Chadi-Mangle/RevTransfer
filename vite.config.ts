@@ -18,21 +18,10 @@ export default defineConfig({
       reload: ['resources/views/**/*.tsx'],
     }),
   ],
-  // Ajouter ces configurations supplémentaires
   server: {
-    hmr: {
-      // Essayez ces options pour résoudre les problèmes de connexion HMR
-      protocol: 'ws',
-      host: 'localhost',
-      timeout: 5000,
-      overlay: true,
-    },
     watch: {
-      usePolling: true, // Utile sur certains systèmes Linux
+      usePolling: true, // Utile sur Linux
       interval: 1000,
     },
-  },
-  optimizeDeps: {
-    include: ['@kitajs/html'],
   },
 })

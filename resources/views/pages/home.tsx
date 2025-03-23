@@ -1,10 +1,10 @@
-import { Layout } from "../components/Layout.js"
+import { Layout } from "../components/layout.js"
 // import { csrfField, route } from "#start/vite"
-import { HttpContext } from "@adonisjs/core/http"
+// import { HttpContext } from "@adonisjs/core/http"
 
 export function Home() {
-  const ctx = HttpContext.get()
-  const isAuthenticated = ctx?.auth?.user
+  // const ctx = HttpContext.get()
+  // const isAuthenticated = ctx?.auth?.user
 
   return (
     <Layout>
@@ -21,7 +21,7 @@ export function Home() {
                 RevTransfer vous permet de partager vos fichiers avec un chiffrement de bout en bout, 
                 un système de versioning et des options d'expiration personnalisables.
               </p>
-              <div class="flex flex-col sm:flex-row gap-4">
+              <div class="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
                 <a 
                   href="/" 
                   class="bg-white text-indigo-600 hover:bg-yellow-300 px-8 py-3 rounded-lg font-semibold text-center transition-colors"

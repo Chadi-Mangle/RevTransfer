@@ -1,7 +1,6 @@
 import router from '@adonisjs/core/services/router'
 import { HttpContext } from '@adonisjs/core/http'
 import vite from '@adonisjs/vite/services/main'
-import { Html } from '@kitajs/html'
 
 export function space(num: number) {
   return `calc(${num} * var(--space))`
