@@ -1,3 +1,5 @@
+import { BlobOptions } from 'node:buffer'
+
 declare global {
   namespace JSX {
     interface HtmlTag {

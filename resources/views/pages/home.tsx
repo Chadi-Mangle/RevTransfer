@@ -9,7 +9,7 @@ export function Home() {
   return (
     <Layout>
       {/* Hero Section */}
-      <div up-main="modal"></div>
+      <div up-main></div>
       <div class="bg-gradient-to-r from-indigo-600 to-purple-600">
         <div class="container mx-auto px-6 py-16 md:py-24 lg:py-32">
           <div class="flex flex-col md:flex-row items-center justify-between">
