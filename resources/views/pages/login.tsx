@@ -4,7 +4,7 @@ import { csrfField } from "#utils/csrf"
 export function Login() {
   return (
     <Layout>
-      <div class="modal-content" up-main="modal">
+      <div up-main>
         <div class="max-w-md mx-auto bg-white p-8 rounded-xl shadow-md">
             <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Connexion</h2>
             
