@@ -19,3 +19,23 @@ router.get('/', () => {
 router.get('/login', () =>{
   return <Login />
 }).as('login')
+
+router.get('/register', () => {
+  return <Login />
+}).as('register')
+
+
+router.post('/upload', async ({ request, response }) => {
+  const file = request.file('file')
+  console.log(file) 
+  
+  
+  // if (!file) {
+  //   return response.badRequest('No file uploaded')
+  // }
+
+  // const key = `uploads/${cuid()}.${file.extname}` 
+  // await file.moveToDisk(key)
+
+
+}).as('upload') 
