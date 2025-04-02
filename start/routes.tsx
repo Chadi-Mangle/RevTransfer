@@ -29,7 +29,19 @@ router.post('/upload', async ({ request, response }) => {
   const file = request.file('file')
   console.log(file) 
   
+  if (file) {
+    return (
+    <div id="upload-result">
+      <p>Works !</p>
+    </div>
+    )
+  }
   
+  return (
+    <div id="upload-result">
+      <p>Dont have file</p>
+    </div>
+    )
   // if (!file) {
   //   return response.badRequest('No file uploaded')
   // }

@@ -1,6 +1,10 @@
 import { getFileIcon } from "#resources/js/utils";
 
- export function FilePreview(file: File) {
+ export function FilePreview(file?: File) {
+  if (!file) {
+    return <div class="space-y-4" id="file-preview"/>
+  }
+
   return (
     <div class="flex items-center justify-between bg-gray-700 rounded-lg p-4 shadow-md">
       <div class="flex items-center space-x-4">
@@ -18,9 +22,10 @@ import { getFileIcon } from "#resources/js/utils";
       </div>
 
       {/* Bouton d'action (optionnel) */}
-      {/* <button
+      <button
+        type="button"
         class="text-red-400 hover:text-red-500 transition-colors"
-        onclick={() => alert('Supprimer le fichier')}
+        onclick="deleteFilePreview()"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +41,7 @@ import { getFileIcon } from "#resources/js/utils";
             d="M6 18L18 6M6 6l12 12"
           />
         </svg>
-      </button> */}
+      </button>
     </div>
   );
 }
