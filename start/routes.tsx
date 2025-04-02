@@ -10,7 +10,9 @@
 import router from '@adonisjs/core/services/router'
 import { Home } from '#resources/views/pages/home'
 import { Login } from '#resources/views/pages/login'
+import FileController from '#controllers/file_controller'
 
+const fileController = new FileController()
 
 router.get('/', () => {
   return <Home />
@@ -24,30 +26,6 @@ router.get('/register', () => {
   return <Login />
 }).as('register')
 
-
-router.post('/upload', async ({ request, response }) => {
-  const file = request.file('file')
-  console.log(file) 
-  
-  if (file) {
-    return (
-    <div id="upload-result">
-      <p>Works !</p>
-    </div>
-    )
-  }
-  
-  return (
-    <div id="upload-result">
-      <p>Dont have file</p>
-    </div>
-    )
-  // if (!file) {
-  //   return response.badRequest('No file uploaded')
-  // }
-
-  // const key = `uploads/${cuid()}.${file.extname}` 
-  // await file.moveToDisk(key)
-
-
-}).as('upload') 
+router.post('/upload', async (ctx) => {
+  return fileController.upload(ctx)
+}).as('upload')

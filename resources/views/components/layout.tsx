@@ -17,7 +17,7 @@ export function Layout(props: LayoutProps) {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
 
           <title>RevTransfer</title>
-          <Vite.Entrypoint entrypoints={['resources/css/app.css', 'resources/js/app.js']} />
+          <Vite.Entrypoint entrypoints={['resources/css/app.css', 'resources/js/app.js', 'resources/css/unpoly-change.css']} />
         </head>
         <body>
           {children}

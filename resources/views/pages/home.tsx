@@ -17,6 +17,7 @@ export function Home() {
                 href={route('login')}
                 class="text-gray-300 hover:text-indigo-400 transition-colors"
                 up-layer="new"
+                up-size="small"
               >
                 Se connecter
               </a>
@@ -24,6 +25,7 @@ export function Home() {
                 href={route('register')}
                 class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg text-sm transition-colors"
                 up-layer="new"
+                up-size="small"
               >
                 S'inscrire
               </a>
