@@ -1,8 +1,9 @@
 import type { HttpContext } from '@adonisjs/core/http'
 
 export default class FileController {
-    public async upload({ request, response }: HttpContext) {
-    const file = request.file('file')
+    public async upload(ctx : HttpContext) {
+      const request = ctx.request
+      const file = request.file('file')
     
     if (file) {
       return (

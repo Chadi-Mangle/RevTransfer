@@ -1,5 +1,4 @@
 import { csrfField } from '#utils/csrf'
-import { FilePreview } from './file_preview.js'
 
 export function FileUploader() {
   return (
